@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.26772in" height="11.6929in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8267.72 11692.91"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:none}
+    .fil0 {fill:green}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <path d="M-87.92 88.15l8402.09 0 0 2888.21 -8402.09 0 0 -2888.21z"/>
+   </clipPath>
+    <clipPath id="id1">
+     <path d="M5592.68 88.15l2721.5 0 0 1989.53 -2721.5 0 0 -1989.53z"/>
+    </clipPath>
+    <clipPath id="id2">
+     <path d="M-87.92 88.15l8402.09 0 0 2888.21 -8402.09 0 0 -2888.21z"/>
+    </clipPath>
+    <clipPath id="id3">
+     <path d="M-87.92 88.15l2431.49 0 0 2246.39 -2431.49 0 0 -2246.39z"/>
+    </clipPath>
+    <clipPath id="id4">
+     <path d="M-87.92 88.15l8402.09 0 0 2888.21 -8402.09 0 0 -2888.21z"/>
+    </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="-87.92,88.15 8314.18,88.15 8314.18,2976.37 -87.92,2976.37 "/>
+  <g style="clip-path:url(#id0)">
+   <g id="_2582916607824">
+   </g>
+   <g style="clip-path:url(#id1)">
+    <image x="5592.68" y="-145.39" width="3013.23" height="2223.08" xlink:href="kasu-logo_Images\kasu-logo_ImgID1.png"/>
+   </g>
+   <g style="clip-path:url(#id2)">
+   </g>
+   <g style="clip-path:url(#id3)">
+    <image x="-769.88" y="-168.85" width="3113.45" height="2503.39" xlink:href="kasu-logo_Images\kasu-logo_ImgID2.png"/>
+   </g>
+   <g style="clip-path:url(#id4)">
+   </g>
+  </g>
+  <polygon class="fil1" points="-87.92,88.15 8314.18,88.15 8314.18,2976.37 -87.92,2976.37 "/>
+ </g>
+</svg>

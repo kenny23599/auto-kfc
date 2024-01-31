@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <title>App/signup</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(function(error) {
+            console.error('Service Worker registration failed:', error);
+          });
+      }
+    </script>
+</head>
+<body class="body">
+    <div class="imagediv">
+        <div class="blur">
+            <div class="form-div" id="form-div">
+                <form >
+                    <h2>Sign up</h2>
+                    <span class="bold">Matri/Jamb number*</span><br>
+                    <input type="text" class="text"><br>
+                    <span class="bold">Department*</span><br>
+                    <input type="text" class="text"><br>
+                    <span class="bold">Phone number</span><br>
+                    <input type="number"  class="text"><br>
+                    <span class="bold">Email*</span><br>
+                    <input type="email"class="text"><br>
+                    <span class="bold">Password*</span><br>
+                    <input type="password" class="text"><br>
+                    <input type="submit" value="signup" class="button"><br> 
+                </form>
+                <b class="bold1">Already have an account <span onclick="openlogin()" class="login"> Login</span></b>
+                </div>
+            
+            <div class="log-div" id="log-div">
+                
+                    <div><img src="kasu.jpeg" class="img"></div>
+                    <span class="bold">Matri/Jamb number*</span><br>
+                    <input type="matric-number text" class="text" id="matric-number" ><br>
+                    <span class="bold">Password*</span><br>
+                    <input type="password" class=" password text" id="password " ><br>
+                    <button class="button" onclick="openhome()">login</button><br>
+                    <b class="bold1">Signup for new account <span onclick="opensignup()" class="login"> Sign up</span></b><br>
+                    <p><b class="bold1">Note: Only Faculty of Computing</b></p>
+                </div>
+        </div>
+
+        
+
+    </div>
+    
+</body>
+</html>
