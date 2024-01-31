@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <style>
+        .h3{
+            margin-top: 7vh;
+            margin-left: 3vw;
+            font-size: larger;
+            
+        }
+        .table{
+            border: thin;
+            border-color: rgb(212, 212, 212);
+            border-style: solid;
+            width: 90%;
+            margin-top: 7vh;
+            margin-left: 5vw;
+            box-shadow: 1px 1px 3px 5px rgb(223, 223, 223);
+            border-radius: 10px;
+            padding: 0px;
+            border-collapse:unset;
+            text-indent: initial;
+            border-spacing: 0px
+           
+    
+        }
+        .tr-head{
+            background-color: rgb(241, 176, 54);
+        }
+        .th{
+            border: thin;
+            width: 14vw;
+            padding: 1vw;
+            color: white;
+            border-top-left-radius: 10px;
+           
+        }
+        .td{
+            border: thin;
+            text-align: center;
+            border-top-style: solid;
+            border-right-style: solid;
+            padding: 2vw;
+        }
+    </style>
+</head>
+<body class="home-body">
+
+    <div class="top-div">
+        <div class="name-div">
+            <div><img src="back-arrow.svg" class="back-arrow" onclick="home()"></div>
+            <h3 class="h3" style="color: white;" onclick="timetable()">TIMETABLE</h3>
+            <div><img src="star.svg" class="top-div-icon"></div>
+        </div>
+        <div style="display: none;" id="Monday">
+            <table class="table">
+                <tr style=" background-color: rgb(241, 176, 54);" id="details1">
+                <th class="th">Monday</th>
+                <th style="color: white;"></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;"id="dates"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div style="display: none;" id="Tuesday">
+            <table class="table">
+                <tr style="background-color: blue; " id="details2">
+                <th class="th">Tuesday</th>
+                <th style="color: white;"></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;"id="dates"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div style="display: none;" id="Wenesday">
+            <table class="table">
+                <tr style=" background-color: rgb(9, 143, 27);" id="details3">
+                <th class="th">Wenesday</th>
+                <th style="color: white;"></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;" id="dates"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div style="display: none;" id="Thursday">
+            <table class="table">
+                <tr style=" background-color: rgb(139, 8, 37); " id="details4">
+                <th class="th">Thursday</th>
+                <th style="color: white;"></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;" id="dates"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div style="display: none;" id="Friday">
+            <table class="table">
+                <tr style=" background-color: rgb(39, 7, 82);" id="details5">
+                <th class="th">Friday</th>
+                <th style="color: white;"></th>
+                <th  id="dates" style="text-align: center;color: white;border-top-right-radius: 10px;"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;"">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                
+            </table>
+            
+        </div>
+
+        <div style="display: none;" id="Saturday">
+            <table class="table">
+                <tr style=" background-color: rgb(182, 5, 5);" id="details6">
+                <th class="th">Saturday</th>
+                <th style="color: white;"></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;" id="dates"></th>
+                </tr>
+
+                <tr>
+                    <th class="td">Classes</th>
+                    <th class="td">Time</th>
+                    <th class="td" style="border-right-style: none">Hall</th>
+                </tr>
+                <tr>
+                    <td class="td">Csc201</td>
+                    <td class="td">8-10am</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Math201</td>
+                    <td class="td">10-12pm</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">Csc202</td>
+                    <td class="td">1-2pm</td>
+                    <td class="td" style="border-right-style: none;color: green;">hold</td>
+                </tr>
+                <tr>
+                    <td class="td">math201</td>
+                    <td class="td">2-4pm</td>
+                    <td class="td" style="border-right-style: none">hold</td>
+                </tr>
+                
+            </table>
+        </div>
+        <h3 id="sunday"></h3>
+
+        <div>
+            <div class="details-tags" style="margin-top: 2vh;">
+                <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+                <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Kasu Timetable</b><br>
+                    <span style="margin-left: 6.5vw; font-size: small;">Download timetable</span> 
+                </p>
+                <a href="TENTATIVE  LECTURE TIMETABLE 2023-2024.docx" ><div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div></a>
+            </div>
+        </div>
+        
+    <script>
+        
+    let date = Date();
+    let newdate = date.slice(0,15);
+    let time = date.slice(15,21);
+    let timezone = date.slice(-26,-1);
+    let newtime = time.slice(0,3)
+    let x = Number(newtime);
+    let day = newdate.slice(0,3)
+    let dates = newdate.slice(4)
+        console.log(day)
+    let func = myFunction()
+    
+    function myFunction(){
+        //Monday//
+
+        let a = document.getElementById('details1');
+            a.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            a.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{a.cells[1].innerHTML = "Time: " + time + "pm"}
+
+        //Tuesday//
+        let b = document.getElementById('details2');
+            b.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            b.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{b.cells[1].innerHTML = "Time: " + time + "pm"}
+
+        //Wenesday
+        let c = document.getElementById('details3');
+            c.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            c.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{c.cells[1].innerHTML = "Time: " + time + "pm"}
+
+        //thursday
+        let d = document.getElementById('details4');
+            d.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            d.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{d.cells[1].innerHTML = "Time: " + time + "pm"}
+
+        //friday//
+        let e = document.getElementById('details5');
+            e.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            e.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{e.cells[1].innerHTML = "Time: " + time + "pm"}
+
+        //saturday//
+        let f = document.getElementById('details6');
+            f.cells[2].innerHTML = "Date: " + dates
+        
+        if ( x <= 12){
+            f.cells[1].innerHTML = "Time: " + time + "am"
+        }
+
+        else{f.cells[1].innerHTML = "Time: " + time + "pm"}
+
+    
+    }
+
+    
+
+        if (day == 'Mon'){
+            document.getElementById("Monday").style.display = "block";
+           
+        }
+        else if(day == 'Tue'){
+            document.getElementById("Tuesday").style.display = "block";
+            
+        }
+        else if(day == 'Wed'){
+            document.getElementById("Wenesday").style.display = "block";
+            
+            
+        }
+        else if(day == 'Thu'){
+            document.getElementById("Thursday").style.display = "block";
+            
+        }
+        else if(day == 'Fri'){
+            
+            document.getElementById("Friday").style.display = "block";
+            
+            
+        }
+        else if(day == 'Sat'){
+            document.getElementById("Saturday").style.display = "block";
+            
+        }
+        else{
+            document.getElementById('sunday').innerHTML =  'GO REST TODAY NA SUNDAY'
+        }
+
+        
+    </script>
+</body>
+</html>

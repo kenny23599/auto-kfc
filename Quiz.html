@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQ Quiz</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <style>
+        .h3{
+            margin-top: 7vh;
+            margin-left: 3vw;
+            font-size: larger;
+            
+        }
+        .quiz-tags{
+        float: left;
+        text-align: left;
+        font-size: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 40vw;
+        height: 15vh;
+        box-shadow: 1px 1px 3px 2px rgb(223, 223, 223);
+        border-radius: 10px;
+        margin-left: 7vw;
+        margin-top: 7vh;
+       
+        
+        }
+        .tag-icon{
+        width: 60px;
+        margin-left: 10vw;
+        margin-top: 1vh;
+        }
+        
+    
+    </style>
+</head>
+<body class="home-body" >
+
+    <div class="top-div" >
+        <div class="name-div">
+            <div><img src="back-arrow.svg" class="back-arrow" onclick="document.location='Quiz.html'"></div>
+            <h3 class="h3" style="color: white;">IQ Quiz</h3>
+            <div><img src="home-home-svgrepo-com.svg" class="top-div-icon" onclick="home()"></div>
+        </div>
+        <iframe width="100%" height="660px" style="display: none;position: absolute;overflow: auto;" id="frame" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAS3O39VUMjZSR0dHMFlGMlRFREVTTDNINFNVT0kwTi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        
+    
+        <div class="quiz-tags" onclick="document.getElementById('frame').style.display = 'block'" >
+            <div> 
+            <img src="quiz-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="margin-top: 0px; margin-left: 2vw;"><b>Random IQ test</b><br>
+            <span style="font-size: x-small;">Questions of 1-10</span> 
+            </p></div>
+            
+        </div><br>
+        
+        
+      
+</body>
+</html>
