@@ -6,7 +6,7 @@
       "start_url": "index.html",
       "display": "standalone",
       "background_color": "#ffffff",
-      "theme_color": "#000000",
+      "theme_color": "#008000",
       "icons": [
         {
           "src": "kasu-logo.png",
