@@ -3,7 +3,7 @@
       "name": "Kasu Falcuty Of Computing",
       "short_name": "KFC",
       "description": "Computing science site",
-      "start_url": "/index.html",
+      "start_url": "/auto-kfc.html",
       "display": "standalone",
       "background_color": "#ffffff",
       "theme_color": "#000000",
