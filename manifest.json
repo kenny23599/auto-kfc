@@ -5,7 +5,7 @@
       "description": "Computing science site",
       "start_url": "index.html",
       "display": "standalone",
-      "background_color": "#ffffff",
+      "background_color": "#008000",
       "theme_color": "#008000",
       "icons": [
         {
