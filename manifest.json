@@ -1,16 +1,16 @@
 
     {
-      "name": "Kasu Falcuty Of Computing",
+      "name": "Kasu Faculty Of Computing",
       "short_name": "KFC",
       "description": "Computing science site",
       "start_url": "index.html",
       "display": "standalone",
-      "background_color": "#008000",
+      "background_color": "#ffffff",
       "theme_color": "#008000",
       "icons": [
         {
           "src": "kasu-logo.png",
-          "sizes": "192x192",
+          "sizes": "200x192",
           "type": "image/png"
         }
       ]
