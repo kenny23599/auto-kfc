@@ -440,7 +440,7 @@
     box-shadow: 1px 1px 3px 2px rgb(223, 223, 223);
     border-radius: 10px;
     margin-left: 5vw;
-    margin-top: 1vh;
+    margin-top: 2vh;
     display: grid;
     grid-template-columns: 10vw 60vw 10vw ;
     overflow: auto;
