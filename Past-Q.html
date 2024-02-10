@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Questions pdf</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <style>
+        .h3{
+            margin-top: 7vh;
+            margin-left: 3vw;
+            font-size: larger;
+            
+            
+        }
+        .home-body-div{
+            margin-top: 2vh; 
+            height: 86vh; 
+            overflow: auto;
+            font-size: small;
+        }
+
+        .search{
+            width: 65vw;
+            height: fit-content;
+            outline: none;
+            border-style: solid;
+            border-width: thin;
+            border-radius: 7px;
+            margin-top: 6vh;
+            margin-left: 1vw;
+            display: none;
+            position: inherit;
+        }
+
+        .top-div-icon{
+            width: 10vw;
+            float: inline-start;
+            position: fixed;
+        }
+
+    </style>
+
+
+    <script>
+        function openSearch(){
+            document.getElementById("text").style.display = "none";
+            document.getElementById("mySearch").style.display = "block";
+
+        } 
+
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+            }
+    </script>
+
+</head>
+
+
+<body class="home-body">
+
+    <div class="top-div">
+        <div class="name-div">
+            <div><img src="back-arrow.svg" class="back-arrow" onclick="home()"></div>
+            <h3 class="h3" style="color: white;"id="text">PAST Q</h3>
+            <input type="text" class="search" id="mySearch"  onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+            <div><img src="search-file-svgrepo-com.svg" class="top-div-icon" onclick="openSearch()"></div>
+        </div>
+        </div>
+    <div style="height: 85vh; overflow: auto;">
+
+<ul id="myMenu" style="display:contents;list-style-type: none;">
+
+        <li><a href="#" style="color: black;"></a>
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">CSC 101 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small; color: rgb(160, 160, 160);">Click to download....</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+    </a>
+
+
+        <li><a href="#" style="color: black; text-decoration: none;" >
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw;  ">Phy107 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download....</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black; text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Math102 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download....</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Phy 101 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download..</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">CSC 204 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download...</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">CSC202 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download..</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">CSC 203 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Bio101 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download...</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+   
+        <li><a href="#" style="color: black;text-decoration: none;">
+            <div class="Lecture-tags">
+                <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+                <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Chem101 PQ</b><br>
+                    <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download..</span> 
+                </p>
+                <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+            </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Math105 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download..</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none; ">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Math107 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+
+        <li><a href="#" style="color: black;text-decoration: none;">
+        <div class="Lecture-tags">
+            <div> <img src="pdf-file-type-svgrepo-com.svg" class="tag-icon"></div>
+            <p style="padding-top: 0.5vh;"><b style="margin-left: 7vw; ">Math109 PQ</b><br>
+                <span style="margin-left: 6.5vw; font-size: small;color: rgb(160, 160, 160);">Click to download</span> 
+            </p>
+            <div> <img src="download-circle-svgrepo-com.svg" class="tag-icon"></div>
+        </div>
+        </a>
+
+</li></ul>
+
+<div style="width: 20vw; height: 5vh; float: left;" >
+          
+</div>
+</div>
+        
+
+</body>
+</html>
