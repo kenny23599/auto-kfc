@@ -4,6 +4,7 @@
     object-fit: fill;
     margin: 0%;
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 .imagediv{
@@ -114,6 +115,7 @@
 .home-body-div{
   height: 85vh; 
   overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: small;
   
 }
