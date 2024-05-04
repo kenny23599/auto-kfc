@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <style>
+        .h3{
+            margin-top: 7vh;
+            margin-left: 3vw;
+            font-size: larger;
+            
+        }
+        .table{
+            border: thin;
+            border-color: rgb(212, 212, 212);
+            border-style: solid;
+            width: 90%;
+            margin-top: 7vh;
+            margin-left: 5vw;
+            box-shadow: 1px 1px 3px 5px rgb(223, 223, 223);
+            border-radius: 10px;
+            padding: 0px;
+            border-collapse:unset;
+            text-indent: initial;
+            border-spacing: 0px
+           
+        }
+        .table-total{
+            border: thin;
+            border-color: rgb(212, 212, 212);
+            border-style: solid;                                               
+            width: 90%;
+            margin-top: 5vh;
+            margin-left: 5vw;
+            border-radius: 10px;
+            padding: 0px;
+            border-collapse:unset;
+            text-indent: initial;
+            border-spacing: 0px;
+            margin-bottom: 5vh;
+        }
+        .tr-head{
+            background-color: rgb(241, 176, 54);
+        }
+        .th{
+            border: thin;
+            width: 30vw;
+            padding: 1vw;
+            color: white;
+            border-top-left-radius: 10px;
+           
+        }
+        .td{
+            border: thin;
+            text-align: center;
+            border-top-style: solid;
+            border-right-style: solid;
+            padding: 2vw;
+        }
+        .score{
+            border: thin;
+            text-align: center;
+            border-top-style: solid;
+            border-left-style: solid;
+            padding: 2vw;
+
+        }
+
+        .input{
+            border: none;
+            width: 15vw;
+            height: 2vh;
+            text-align: center;
+            outline: none;
+        }
+
+        .input-unit{
+            border: none;
+            width: 10vw;
+            height: 2vh;
+            text-align: center;
+            outline: none;
+        }
+        .select{
+            width: 10vw;
+            background-color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn{
+            float: right;
+            margin-right: 5vw;
+            background-color: green;
+            border-radius: 1vw;
+            border: none;
+            color: white;
+            padding: 1.5vw;
+            margin-bottom: 5vh;
+        }
+    </style>
+</head>
+<body class="home-body">
+
+    <div class="top-div">
+        <div class="name-div">
+            <div><img src="back-arrow.svg" class="back-arrow" onclick="home()"></div>
+            <h3 class="h3" style="color: white;" onclick="timetable()">Calculate Result</h3>
+            <div><img src="star.svg" class="top-div-icon"></div>
+        </div>
+
+
+        <div style="display: block;" id="Result">
+            <table class="table">
+                <tr style=" background-color: rgb(241, 176, 54);" id="details1">
+                <th class="th">Result</th>
+                <th style="color: white;"></th>
+                <th></th>
+                <th style="text-align: center;color: white;border-top-right-radius: 10px;"id="dates"></th>
+
+                </tr>
+
+                <tr>
+                    <th class="td">Course code</th>
+                    <th class="td">Unit</th>
+                    <th class="td" >Grade</th>
+                    <th class="td" style="border-right-style: none">Score</th>
+                </tr>
+
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score" onclick="score()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit1">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select1">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score1" onclick="score1()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit2">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select2">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score2" onclick="score2()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit3">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select3">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score3" onclick="score3()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit4">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select4">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score4" onclick="score4()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit5">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select5">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score5" onclick="score5()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit6">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select6">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score6" onclick="score6()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit7">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select7">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score7" onclick="score7()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit8">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select8">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score8" onclick="score8()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit9">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select9">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score9" onclick="score9()"></td>
+                </tr>
+
+                <tr>
+                    <td class="td">
+                        <input type="text" placeholder="Course code" class="input">
+                    </td>
+                    <td class="td">
+                       <input type="number" placeholder="credit unit" class="input-unit" id="unit10">
+                    </td>
+                    <td class="td">
+                        <select class="select" id="select10">
+                            <option>Select Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+                        </select>
+                    </td>
+                    <td class="td" style="border-right-style: none;color: green;" id="score10" onclick="score10()"></td>
+                </tr>
+                
+            </table>
+
+            <table class="table-total">
+                <tr>
+                    <th class="td" style="border-top-style: none" onclick="TCUR()">TCUR</th>
+                    <th class="td" style="border-top-style: none" onclick="TCUP()">TCUP</th>
+                    <th class="td" style="border-top-style: none" onclick="GPA()" >CGPA</th>
+                    <th class="td" style="border-right-style: none; border-top-style: none">CLASS</th>
+                </tr>
+
+                <td class="td" id="tcur" ></td>
+                <td class="td" id="tcup" ></td>
+                <td class="td" id="gpa" ></td>
+                <td class="td" id="class" style="border-right-style: none;" ></td>
+            </table>
+
+            <button onclick="printq()" class="btn">Print</button>
+            
+            
+        </div>
+        <script>
+
+            let A = 5
+            let B = 4
+            let C = 3
+            let D = 2
+            let E = 1
+            let F = 0
+
+
+
+    function score(){
+    
+        var x = document.getElementById('select').value
+            var y = document.getElementById('unit').value
+            var z = document.getElementById('score')
+            
+
+            if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+
+    function score1(){
+    
+        var x = document.getElementById('select1').value
+        var y = document.getElementById('unit1').value
+        var z = document.getElementById('score1')
+
+    if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+
+    function score2(){
+    
+        var x = document.getElementById('select2').value
+        var y = document.getElementById('unit2').value
+        var z = document.getElementById('score2')
+
+    if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+          
+    function score3(){
+    
+        var x = document.getElementById('select3').value
+        var y = document.getElementById('unit3').value
+        var z = document.getElementById('score3')
+
+    if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+           
+    function score4(){
+    
+        var x = document.getElementById('select4').value
+        var y = document.getElementById('unit4').value
+        var z = document.getElementById('score4')
+
+    if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+
+    function score5(){
+    
+        var x = document.getElementById('select5').value
+        var y = document.getElementById('unit5').value
+        var z = document.getElementById('score5')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+    function score6(){
+    
+        var x = document.getElementById('select6').value
+        var y = document.getElementById('unit6').value
+        var z = document.getElementById('score6')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+    function score7(){
+    
+        var x = document.getElementById('select7').value
+        var y = document.getElementById('unit7').value
+        var z = document.getElementById('score7')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+    function score8(){
+    
+        var x = document.getElementById('select8').value
+        var y = document.getElementById('unit8').value
+        var z = document.getElementById('score8')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+    function score9(){
+    
+    var x = document.getElementById('select9').value
+    var y = document.getElementById('unit9').value
+    var z = document.getElementById('score9')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+
+    function score10(){
+    
+    var x = document.getElementById('select10').value
+    var y = document.getElementById('unit10').value
+    var z = document.getElementById('score10')
+
+        if(x=="A"){
+            z.innerHTML = y*A
+
+            return z;
+        }
+
+        else if(x=="B"){
+            z.innerHTML = y*B
+
+            return z;
+        }
+
+        else if(x=="C"){
+            z.innerHTML = y*C
+
+            return z;
+        }
+
+        else if(x=="D"){
+            z.innerHTML = y*D
+
+            return z;
+        }
+
+        else if(x=="E"){
+            z.innerHTML = y*E
+
+            return z;
+        }
+
+        else if(x=="F"){
+            z.innerHTML = y*F
+
+            return z;
+        }
+
+        return y,z;
+    }
+        
+
+        
+
+    function TCUP(){
+
+        let score = document.getElementById('score').innerHTML
+        let score1 = document.getElementById('score1').innerHTML
+        let score2 = document.getElementById('score2').innerHTML
+        let score3 = document.getElementById('score3').innerHTML
+        let score4 = document.getElementById('score4').innerHTML
+        let score5 = document.getElementById('score5').innerHTML
+        let score6 = document.getElementById('score6').innerHTML
+        let score7 = document.getElementById('score7').innerHTML
+        let score8 = document.getElementById('score8').innerHTML
+        let score9 = document.getElementById('score9').innerHTML
+        let score10 = document.getElementById('score10').innerHTML
+        
+        var totalscore = Number(score) + Number(score1) + Number(score2) + Number(score3) + Number(score4) + Number(score5) + Number(score6) + Number(score7) + Number(score8) + Number(score9) + Number(score10)
+
+         let TCUR = document.getElementById('tcup').innerHTML = totalscore;
+      
+    }
+
+    function TCUR(){
+        let unit = document.getElementById('unit').value
+        let unit1 = document.getElementById('unit1').value
+        let unit2 = document.getElementById('unit2').value
+        let unit3 = document.getElementById('unit3').value
+        let unit4 = document.getElementById('unit4').value
+        let unit5 = document.getElementById('unit5').value
+        let unit6 = document.getElementById('unit6').value
+        let unit7 = document.getElementById('unit7').value
+        let unit8 = document.getElementById('unit8').value
+        let unit9 = document.getElementById('unit9').value
+        let unit10 = document.getElementById('unit10').value
+
+        let totalunit = Number(unit) + Number(unit1) + Number(unit2) + Number(unit3) + Number(unit4) + Number(unit5) + Number(unit6) + Number(unit7) + Number(unit8) + Number(unit9) + Number(unit10)
+
+        let TCUR = document.getElementById('tcur').innerHTML = totalunit
+    }
+
+    function GPA(){
+
+        let score = document.getElementById('score').innerHTML
+        let score1 = document.getElementById('score1').innerHTML
+        let score2 = document.getElementById('score2').innerHTML
+        let score3 = document.getElementById('score3').innerHTML
+        let score4 = document.getElementById('score4').innerHTML
+        let score5 = document.getElementById('score5').innerHTML
+        let score6 = document.getElementById('score6').innerHTML
+        let score7 = document.getElementById('score7').innerHTML
+        let score8 = document.getElementById('score8').innerHTML
+        let score9 = document.getElementById('score9').innerHTML
+        let score10 = document.getElementById('score10').innerHTML
+        let unit = document.getElementById('unit').value
+        let unit1 = document.getElementById('unit1').value
+        let unit2 = document.getElementById('unit2').value
+        let unit3 = document.getElementById('unit3').value
+        let unit4 = document.getElementById('unit4').value
+        let unit5 = document.getElementById('unit5').value
+        let unit6 = document.getElementById('unit6').value
+        let unit7 = document.getElementById('unit7').value
+        let unit8 = document.getElementById('unit8').value
+        let unit9 = document.getElementById('unit9').value
+        let unit10 = document.getElementById('unit10').value
+
+        let totalunit = Number(unit) + Number(unit1) + Number(unit2) + Number(unit3) + Number(unit4) + Number(unit5) + Number(unit6) + Number(unit7) + Number(unit8) + Number(unit9) + Number(unit10)
+        var totalscore = Number(score) + Number(score1) + Number(score2) + Number(score3) + Number(score4) + Number(score5) + Number(score6) + Number(score7) + Number(score8) + Number(score9) + Number(score10)
+
+        let gpa = totalscore/totalunit
+        let GPA = document.getElementById('gpa').innerHTML = gpa.toFixed(2)
+
+        if (gpa >= 4.5){
+            document.getElementById('class').innerHTML = "First class"
+        }
+
+        else if(gpa >= 3.5){
+            document.getElementById('class').innerHTML = "Second class upper"
+        }
+
+        else if(gpa >= 2.5){
+            document.getElementById('class').innerHTML = "Second class lower" 
+        }
+
+        else if(gpa >= 1.5){
+            document.getElementById('class').innerHTML = "Third class "
+        }
+
+        else{
+            document.getElementById('class').innerHTML = "sorry"
+        }
+
+        
+
+    }
+
+    function printq(){
+        window.print()
+    }
+        
+    </script>
+    </body>
+    </html>
